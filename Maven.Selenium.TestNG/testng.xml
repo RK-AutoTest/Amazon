@@ -3,8 +3,8 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="co.amazon.tests.Homepagetest"/>
-<class name="co.amazon.tests.Testbase"/>
+      <class name="co.amazon.tests.HomepageTest"/>
+      <class name="co.amazon.tests.Testbase"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

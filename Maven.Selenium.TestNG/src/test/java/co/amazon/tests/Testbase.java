@@ -23,7 +23,8 @@ public class Testbase {
 	}
 
 	@AfterTest
-	public void teardown() {
+	public void teardown() throws InterruptedException {
+		Thread.sleep(5000);
 		System.out.print("ji quitting");
 		driver.close();
 	}
