@@ -6,7 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.testng.AssertJUnit;
-import org.testng.annotations.Test;
 
 public class AmazonHomePage {
 
@@ -23,11 +22,13 @@ public class AmazonHomePage {
 	WebElement submit1;
 	@FindBy(how = How.XPATH, using = "//*[@id=\"nav-logo-sprites\"]")
 	WebElement home1;
+	@FindBy(how = How.ID, using = "nav-link-accountList-nav-line-1")
+	WebElement signin;
 
 	// method to put input in input field.
 	public void inputSearchbox(String strsearch) {
 		try {
-			System.out.print("im in page input  ");
+			System.out.print("im in homepage input  ");
 			text1.sendKeys(strsearch);
 		} catch (Exception e) {
 
@@ -38,7 +39,7 @@ public class AmazonHomePage {
 	// method to click on search button.
 	public void submitsearch() {
 		try {
-			System.out.print("im in page click ");
+			System.out.print("im in homepage click ");
 			submit1.click();
 		} catch (Exception e) {
 

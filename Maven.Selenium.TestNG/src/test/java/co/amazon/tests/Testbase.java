@@ -17,8 +17,8 @@ public class Testbase {
 		System.setProperty("webdriver.gecko.driver", "C:\\geckodriver-v0.31.0-win64\\geckodriver.exe");
 		driver = new FirefoxDriver();
 		driver.get("https://www.amazon.com/");
-		driver.manage().window().maximize();
-		driver.manage().deleteAllCookies();
+		// driver.manage().window().maximize();
+		
 
 	}
 
@@ -26,6 +26,7 @@ public class Testbase {
 	public void teardown() throws InterruptedException {
 		Thread.sleep(5000);
 		System.out.print("ji quitting");
+		driver.manage().deleteAllCookies();
 		driver.close();
 	}
 }

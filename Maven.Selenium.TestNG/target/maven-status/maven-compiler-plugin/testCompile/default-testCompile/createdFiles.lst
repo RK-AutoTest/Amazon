@@ -1,3 +1,4 @@
 co\amazon\pages\AmazonHomePage.class
 co\amazon\tests\HomepageTest.class
 co\amazon\tests\Testbase.class
+co\amazon\pages\AmazonLoginPage.class
