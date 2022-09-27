@@ -13,7 +13,6 @@ public class Testbase {
 
 	@BeforeTest
 	public void initialize() throws IOException {
-		System.out.print("browser class ji");
 		System.setProperty("webdriver.gecko.driver", "C:\\geckodriver-v0.31.0-win64\\geckodriver.exe");
 		driver = new FirefoxDriver();
 		driver.get("https://www.amazon.com/");
