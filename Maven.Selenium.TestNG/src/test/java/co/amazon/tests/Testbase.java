@@ -18,13 +18,12 @@ public class Testbase {
 		driver = new FirefoxDriver();
 		driver.get("https://www.amazon.com/");
 		// driver.manage().window().maximize();
-		
 
 	}
 
 	@AfterTest
 	public void teardown() throws InterruptedException {
-		Thread.sleep(5000);
+		Thread.sleep(4000);
 		System.out.print("ji quitting");
 		driver.manage().deleteAllCookies();
 		driver.close();

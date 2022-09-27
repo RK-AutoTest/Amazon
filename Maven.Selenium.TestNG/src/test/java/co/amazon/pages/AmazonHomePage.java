@@ -21,9 +21,7 @@ public class AmazonHomePage {
 	@FindBy(how = How.ID, using = "nav-search-submit-button")
 	WebElement submit1;
 	@FindBy(how = How.XPATH, using = "//*[@id=\"nav-logo-sprites\"]")
-	WebElement home1;
-	@FindBy(how = How.ID, using = "nav-link-accountList-nav-line-1")
-	WebElement signin;
+	WebElement home;
 
 	// method to put input in input field.
 	public void inputSearchbox(String strsearch) {
@@ -39,7 +37,7 @@ public class AmazonHomePage {
 	// method to click on search button.
 	public void submitsearch() {
 		try {
-			System.out.print("im in homepage click ");
+
 			submit1.click();
 		} catch (Exception e) {
 
@@ -57,9 +55,15 @@ public class AmazonHomePage {
 	// method to scroll down the page and click on home page icon.
 	public void scrolldownandhome() {
 
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,3000)");
-		home1.click();
+		try {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("window.scrollBy(0,3000)");
+			Thread.sleep(3000);
+			home.click();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	}
 
