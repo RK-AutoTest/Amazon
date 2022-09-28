@@ -8,7 +8,7 @@ import co.amazon.pages.AmazonHomePage;
 import co.amazon.pages.AmazonLoginPage;
 import co.amazon.pages.AmazonSignUpPage;
 
-public class HomepageTest extends Testbase {
+public class TestSenarios extends Testbase {
 
 	@Test(priority = 1)
 	public void login() {
