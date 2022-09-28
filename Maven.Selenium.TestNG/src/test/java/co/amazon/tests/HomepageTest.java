@@ -6,6 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import co.amazon.pages.AmazonHomePage;
 import co.amazon.pages.AmazonLoginPage;
+import co.amazon.pages.AmazonSignUpPage;
 
 public class HomepageTest extends Testbase {
 
@@ -21,9 +22,19 @@ public class HomepageTest extends Testbase {
 		}
 
 	}
-
 	@Test(priority = 2)
-	public void init1() {
+	public void signup() {
+		try {
+			AmazonSignUpPage sp = PageFactory.initElements(driver, AmazonSignUpPage.class);
+			sp.signupage("rohit", "rk97606@gmail.com", "12345@33");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	@Test(priority = 3)
+	public void homesearchbox() {
 		try {
 
 			AmazonHomePage hp = PageFactory.initElements(driver, AmazonHomePage.class);

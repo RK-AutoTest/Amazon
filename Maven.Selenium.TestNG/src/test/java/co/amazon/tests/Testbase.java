@@ -10,7 +10,7 @@ import java.io.IOException;
 public class Testbase {
 
 	public static WebDriver driver = null;
-
+    // method to initialize browser driver;
 	@BeforeTest
 	public void initialize() throws IOException {
 		System.setProperty("webdriver.gecko.driver", "C:\\geckodriver-v0.31.0-win64\\geckodriver.exe");
@@ -19,7 +19,7 @@ public class Testbase {
 		// driver.manage().window().maximize();
 
 	}
-
+	// method to quit browser 
 	@AfterTest
 	public void teardown() throws InterruptedException {
 		Thread.sleep(4000);

@@ -48,8 +48,13 @@ public class AmazonHomePage {
 	// method to verify page title.
 
 	public void titleverify() {
-		String title = driver.getTitle();
-		AssertJUnit.assertEquals("Amazon.com. Spend less. Smile more.", title);
+		try {
+			String title = driver.getTitle();
+			AssertJUnit.assertEquals("Amazon.com. Spend less. Smile more.", title);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	// method to scroll down the page and click on home page icon.
